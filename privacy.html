@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Speed Reader — Privacy</title>
+<meta name="description" content="Privacy policy for Speed Reader, a Chrome extension for fixation-point reading on the web and in PDFs." />
+<style>
+  @font-face {
+    font-family: "SR-Inter";
+    src: url("./fonts/Inter-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "SR-Inter";
+    src: url("./fonts/Inter-Bold.woff2") format("woff2");
+    font-weight: 700 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "SR-Literata";
+    src: url("./fonts/Literata-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "SR-Literata";
+    src: url("./fonts/Literata-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  :root {
+    --bg: #f6f5ef;
+    --surface: rgba(255, 255, 255, 0.82);
+    --line: #d9d8d0;
+    --ink: #17191f;
+    --ink-soft: #5d6370;
+    --accent: #d8f34e;
+    --accent-ink: #2a3300;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(circle at top left, rgba(216, 243, 78, 0.15), transparent 28%),
+      linear-gradient(180deg, #fbfaf6 0%, var(--bg) 100%);
+    color: var(--ink);
+    font-family: "SR-Inter", "Segoe UI", sans-serif;
+  }
+
+  .wrap {
+    width: min(860px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .top {
+    padding: 28px 0 18px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: var(--ink);
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+
+  .mark span {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .mark::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 7px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+
+  .brand-name {
+    font-family: "SR-Literata", Georgia, serif;
+    font-size: 30px;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+
+  .brand-name b {
+    font-weight: 700;
+  }
+
+  .card {
+    margin: 18px 0 52px;
+    padding: 30px;
+    border-radius: 28px;
+    background: var(--surface);
+    border: 1px solid rgba(23, 25, 31, 0.08);
+    box-shadow: 0 18px 54px rgba(23, 25, 31, 0.08);
+  }
+
+  h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+  }
+
+  .updated {
+    display: inline-flex;
+    margin-bottom: 24px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(216, 243, 78, 0.42);
+    color: var(--accent-ink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  p,
+  li {
+    color: var(--ink-soft);
+    line-height: 1.76;
+    font-size: 1rem;
+  }
+
+  h2 {
+    margin: 28px 0 10px;
+    font-size: 1.35rem;
+    line-height: 1.1;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  code {
+    padding: 2px 6px;
+    border-radius: 8px;
+    background: rgba(23, 25, 31, 0.06);
+    color: var(--ink);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.92em;
+  }
+
+  .footer {
+    padding: 0 0 40px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+
+  @media (max-width: 720px) {
+    .card {
+      padding: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 10vw, 3.2rem);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap top">
+    <a class="brand" href="./index.html">
+      <span class="mark"><span>S</span></span>
+      <span class="brand-name"><b>Spe</b>ed <b>Rea</b>der</span>
+    </a>
+  </div>
+
+  <main class="wrap">
+    <article class="card">
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated: June 18, 2026</div>
+
+      <p>
+        Speed Reader is designed to avoid collecting your data. It has no developer-run servers,
+        no analytics, no ads, and no third-party tracking SDKs.
+      </p>
+
+      <h2>What we collect</h2>
+      <p>
+        <strong>We do not collect, sell, or share your personal data, browsing history, or page content.</strong>
+        The extension does not send your reading activity or document contents to the developer.
+      </p>
+
+      <h2>What is stored in the browser</h2>
+      <p>
+        Speed Reader stores your reading preferences in Chrome storage, such as fixation strength,
+        word frequency, fade level, spacing, and font settings.
+      </p>
+      <ul>
+        <li><code>chrome.storage.sync</code> stores preferences so Chrome can sync them across your own signed-in devices.</li>
+        <li><code>chrome.storage.session</code> may temporarily store short-lived state needed to complete a permission flow, such as opening a PDF right after you grant access to a site.</li>
+      </ul>
+      <p>This stored data is used only so the extension works correctly in your browser. It is not sent to the developer.</p>
+
+      <h2>Page access</h2>
+      <p>
+        Speed Reader reads the text of a web page only when you activate it for that page from the popup switch
+        or with the <code>Alt+B</code> shortcut, or when you explicitly enable automatic activation for that site.
+        The text is processed locally in your browser so it can be reformatted visually. It is not uploaded to the developer.
+      </p>
+
+      <h2>PDF reading</h2>
+      <p>
+        PDFs opened in the built-in reader are processed locally in your browser using a bundled copy of Mozilla's PDF.js.
+      </p>
+      <ul>
+        <li>If you open a local PDF file, the file stays on your device.</li>
+        <li>If you open a PDF from a website, the extension downloads that PDF directly from the source website into your browser so it can be rendered locally.</li>
+        <li>If you open a Google Docs, Slides, or Sheets document in Speed Reader, the extension requests that document's PDF export directly from <code>docs.google.com</code> using your existing browser session, only after you choose to do so.</li>
+      </ul>
+      <p>PDF contents are not uploaded to the developer.</p>
+
+      <h2>Network requests</h2>
+      <p>Speed Reader does make limited network requests in these cases:</p>
+      <ul>
+        <li>to fetch a remote PDF URL that you choose to open in the reader</li>
+        <li>to fetch a Google Docs, Slides, or Sheets PDF export that you choose to open</li>
+      </ul>
+      <p>
+        These requests go directly from your browser to the source website. Speed Reader does not proxy them through developer servers.
+      </p>
+
+      <h2>Permissions, in plain language</h2>
+      <ul>
+        <li><strong>activeTab / scripting</strong> — lets the extension format the page you choose, when you choose it.</li>
+        <li><strong>storage</strong> — saves your preferences in Chrome storage.</li>
+        <li><strong>optional host permissions</strong> — let you enable automatic access for a specific site, for all sites, or for a site's PDFs only when you explicitly grant that access.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        Use the support contact listed in the extension listing or project page for privacy questions.
+      </p>
+    </article>
+  </main>
+
+  <div class="wrap footer">
+    <a href="./index.html">← Back to Speed Reader</a>
+  </div>
+</body>
+</html>
