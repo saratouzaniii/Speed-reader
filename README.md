@@ -1,7 +1,7 @@
 # Speed Reader
 
 Fixation-point reading for the web and PDFs. Speed Reader bolds the first part of
-each word so your eyes lock onto anchor points and glide through text faster.
+each word so your eyes lock onto anchor points and glide through text faster with dyslexia-friendly font option.
 
 ## How it works (on-demand, privacy-first)
 
@@ -11,21 +11,9 @@ by pressing **Alt+B**. At that moment it injects its formatter into that one tab
 (via Chrome's `activeTab`) and reformats the text locally. The extension does not
 send page text to the developer.
 
-## Install (developer mode)
+## Link to chrome extention
 
-1. Unzip this folder somewhere permanent
-2. Go to `chrome://extensions`, enable **Developer mode**
-3. **Load unpacked** → select the `speed-reader` folder
-4. Pin the icon. Open an article, click the icon to open the popup, then use the
-   switch — or press **Alt+B** directly on the page.
 
-## Controls
-
-- **Popup switch / Alt+B** — turn formatting on for the current page
-- **Fixation strength** — how much of each word is bolded (20–70%)
-- **Word frequency** — bold every word, or every 2nd/3rd/4th
-- **Fade unbolded text** — dims the rest of each word to sharpen focus
-- Preferences sync across your own devices via Chrome storage
 
 ## PDF reader
 
@@ -92,5 +80,4 @@ fidelity whenever you need it.
 
 ## Roadmap
 
-OCR for scanned PDFs, reading stats, dyslexia-friendly font option, optional
-auto-run permission for trusted sites.
+OCR for scanned PDFs, reading stats, optional auto-run permission for trusted sites.
