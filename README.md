@@ -1,5 +1,7 @@
 # Speed Reader
 
+![Speed Reader Hero Banner — OpenDyslexic](speed_reader_hero_banner_wide_opendyslexic_4800x1800.png "Speed Reader hero banner — OpenDyslexic")
+
 Fixation-point reading for the web and PDFs. Speed Reader bolds the first part of
 each word so your eyes lock onto anchor points and glide through text faster with dyslexia-friendly font option.
 
