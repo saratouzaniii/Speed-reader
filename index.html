@@ -182,14 +182,15 @@
 <div class="wrap">
   <div class="topbar">
     <div class="brand"><span class="logo"><span>S</span><span class="st"></span></span><span><b>Spe</b>ed <b>Rea</b>der</span></div>
-    <a class="nav-cta sans" id="cta-top" href="#get">Add to Chrome — free</a>
+    <a class="nav-cta sans" id="cta-top" href="https://chromewebstore.google.com/detail/speed-reader/gngnjceanfodfmeajfebfoekiajdenmf?authuser=0&hl=fr">Add to Chrome — free</a>
   </div>
 </div>
 
 <header class="wrap hero">
   <div class="eyebrow">Fixation reading for the whole web</div>
   <h1>Read faster,<br><span class="v">effortlessly.</span></h1>
-  <p>Speed Reader bolds the first part of every word so your eyes lock onto anchor points and glide through any page or PDF. Try the live demo, then switch to a dyslexia-friendly font when you want steadier letterforms.</p>
+  <p>Speed Reader bolds the first part of every word so your eyes lock onto anchor points and glide through any page or PDF. Try the live demo, then switch to a dyslexia-friendly font when you wa[...]
+</p>
 </header>
 
 <div class="wrap">
@@ -233,7 +234,8 @@
     <div class="step">
       <div class="n sans">BRAIN</div>
       <h3>The start is enough</h3>
-      <p>Your brain recognizes a word from its first letters and fills in the rest on its own.</p>
+      <p>Your brain recognizes a word from its first letters and fills in the rest on its own, which is why you can read text full of typos without noticing the[...]
+</p>
     </div>
     <div class="step">
       <div class="n sans">FLOW</div>
@@ -254,7 +256,7 @@
 
 <section class="wrap final" id="get">
   <h2>Try it on your<br>next <span class="v">long read.</span></h2>
-  <a class="big-cta" id="cta-bottom" href="#">Add to Chrome — it's free</a>
+  <a class="big-cta" id="cta-bottom" href="https://chromewebstore.google.com/detail/speed-reader/gngnjceanfodfmeajfebfoekiajdenmf?authuser=0&hl=fr">Add to Chrome — it's free</a>
   <div class="micro">Free · No account · Works on Chrome &amp; Edge · Dyslexia-friendly font option</div>
 </section>
 
@@ -268,7 +270,7 @@
 
   const TEXT = [
     "When we read, our eyes do not glide smoothly across the line. They move in quick jumps and pause briefly on each word, landing on a series of fixation points.",
-    "The brain barely needs the whole word. It recognizes most words from their opening letters and fills in the rest on its own, which is why you can read text full of typos without noticing them.",
+    "The brain barely needs the whole word. It recognizes most words from their opening letters and fills in the rest on its own, which is why you can read text full of typos without noticing the[...]",
     "Bolding the start of each word gives those jumps a clear target. Your eyes find the next anchor faster, your brain completes the word, and reading starts to feel quicker and calmer."
   ];
   const FONT_FAMILIES = {
@@ -286,14 +288,14 @@
     reader.style.fontFamily = FONT_FAMILIES[document.getElementById('fontSel').value] || FONT_FAMILIES.default;
     reader.innerHTML = '';
     TEXT.forEach((para,i)=>{
-      if(i===1){const pb=document.createElement('div');pb.className='pagebreak';pb.textContent='The science of reading';reader.appendChild(pb);}
+      if(i===1){const pb=document.createElement('div');pb.className='pagebreak';pb.textContent='The science of reading';reader.appendChild(pb);} 
       const p=document.createElement('p');
       let last=0,m;WORD_RE.lastIndex=0;
       while((m=WORD_RE.exec(para))!==null){
         if(m.index>last)p.appendChild(document.createTextNode(para.slice(last,m.index)));
         const word=m[0],n=fixLen(word);
         const b=document.createElement('b');b.className='sr-f';b.textContent=word.slice(0,n);p.appendChild(b);
-        if(n<word.length){const r=document.createElement('span');r.className='sr-r';r.textContent=word.slice(n);p.appendChild(r);}
+        if(n<word.length){const r=document.createElement('span');r.className='sr-r';r.textContent=word.slice(n);p.appendChild(r);} 
         last=m.index+word.length;
       }
       if(last<para.length)p.appendChild(document.createTextNode(para.slice(last)));
